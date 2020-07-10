@@ -54,6 +54,8 @@ class ViewController: UIViewController {
             
             guard let player = player else { print("Player is nil"); return }
             
+            player.prepareToPlay()
+            player.enableRate = true
             player.volume = self.volume
             startPlayer()
             
@@ -93,10 +95,17 @@ class ViewController: UIViewController {
         let h:String = hour<10 ? "0\(hour)" : "\(hour)"
         let m:String = minute<10 ? "0\(minute)" : "\(minute)"
         let s:String = second<10 ? "0\(second)" : "\(second)"
-        return "\(h):\(m):\(s)"
+        if hour == 0 && minute == 0{
+            return "\(s)"
+        } else if hour == 0 {
+            return "\(m):\(s)"
+        } else {
+            return "\(h):\(m):\(s)"
+        }
     }
     
     func playAndPauseButtonTapped(){
+        
         if player!.isPlaying {
             player?.pause()
             timer?.invalidate()
@@ -106,6 +115,7 @@ class ViewController: UIViewController {
     }
     
     func previousButtonTapped() {
+        player?.stop()
         if controlCell! < surahList.count {
             controlCell = controlCell! - 1
         }
@@ -115,6 +125,7 @@ class ViewController: UIViewController {
     }
     
     func NextButtonTapped() {
+        player?.stop()
         if controlCell! < surahList.count {
             controlCell = controlCell! + 1
         }
@@ -134,6 +145,29 @@ class ViewController: UIViewController {
         startPlayer()
     }
     
+    func speedSelectButtonTapped(_ sender: Int) {
+        switch sender {
+        case 0:
+            player?.rate = 1.0
+        case 1:
+            player?.rate = 1.25
+        case 2:
+            player?.rate = 1.5
+        case 3:
+            player?.rate = 1.75
+        case -1:
+            player?.rate = 0.75
+        case -2:
+            player?.rate = 0.5
+        case -3:
+            player?.rate = 0.25
+        default:
+            player?.rate = 1.0
+        }
+//        playAndPauseButtonTapped()
+//        player?.play()
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -149,6 +183,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.nextTrack = NextButtonTapped
             cell.volume = didChangevolume
             cell.track = didchangeTime
+            cell.playerSpeed = speedSelectButtonTapped
             cell.titleLabel.text = surahList[controlCell!].SurahTitle
             self.audioSlider =  cell.trackSlider
             self.currentTimeLabel = cell.currentTimeLabel

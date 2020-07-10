@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84074A8F24B84E24006AB4AB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84074A8E24B84E24006AB4AB /* CustomButton.swift */; };
 		847411BD24B5B81600F7DAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847411BC24B5B81600F7DAA8 /* AppDelegate.swift */; };
 		847411BF24B5B81600F7DAA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847411BE24B5B81600F7DAA8 /* SceneDelegate.swift */; };
 		847411C124B5B81600F7DAA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847411C024B5B81600F7DAA8 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84074A8E24B84E24006AB4AB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		847411B924B5B81600F7DAA8 /* AudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847411BC24B5B81600F7DAA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847411BE24B5B81600F7DAA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				847411DA24B5C32500F7DAA8 /* Surah5.mp3 */,
 				847411D724B5C32400F7DAA8 /* Surah6.mp3 */,
 				847411D824B5C32400F7DAA8 /* Surah7.mp3 */,
+				84074A8E24B84E24006AB4AB /* CustomButton.swift */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				847411D124B5BB6000F7DAA8 /* TitleCell.swift in Sources */,
 				847411D324B5BD5500F7DAA8 /* AudioControlCell.swift in Sources */,
+				84074A8F24B84E24006AB4AB /* CustomButton.swift in Sources */,
 				847411C124B5B81600F7DAA8 /* ViewController.swift in Sources */,
 				847411BD24B5B81600F7DAA8 /* AppDelegate.swift in Sources */,
 				847411BF24B5B81600F7DAA8 /* SceneDelegate.swift in Sources */,

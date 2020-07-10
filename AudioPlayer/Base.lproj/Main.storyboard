@@ -81,7 +81,7 @@
                                                     </connections>
                                                 </slider>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="P7q-C9-2Pl">
-                                                    <rect key="frame" x="75.5" y="71" width="223" height="22"/>
+                                                    <rect key="frame" x="75.5" y="93" width="223" height="22"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc4-XS-SWB">
                                                             <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
@@ -107,7 +107,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoP-qD-gvd">
-                                                    <rect key="frame" x="173" y="38" width="28.5" height="17"/>
+                                                    <rect key="frame" x="173" y="31" width="28.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -132,20 +132,150 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBk-Aa-P8Y">
+                                                    <rect key="frame" x="21" y="50.5" width="40" height="40"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.43410209760273971" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="glX-tY-aN8"/>
+                                                        <constraint firstAttribute="width" constant="40" id="sd8-mS-Zge"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <state key="normal" title="Speed">
+                                                        <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="speedButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="s6p-vy-uAK"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99W-89-fim">
+                                                    <rect key="frame" x="48" y="54" width="300" height="33"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r57-4h-Fqf">
+                                                            <rect key="frame" x="274" y="0.0" width="26" height="33"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="26" id="EHt-uE-h4D"/>
+                                                                <constraint firstAttribute="height" constant="33" id="ifb-j7-GFs"/>
+                                                            </constraints>
+                                                            <state key="normal" image="Icon-back-arrow"/>
+                                                            <connections>
+                                                                <action selector="speedViewCollapseButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="GRn-eB-vUd"/>
+                                                            </connections>
+                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yDT-1d-Vq8">
+                                                            <rect key="frame" x="15" y="0.0" width="259" height="33"/>
+                                                            <subviews>
+                                                                <button opaque="NO" tag="-3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuf-Ug-PAJ" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="35.5" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="0.25x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="Boo-ib-ypn"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="-2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCI-3E-AeP" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="37.5" y="0.0" width="35" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="0.5x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="HmY-md-265"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-Z0-ldR" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="74.5" y="0.0" width="35.5" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="0.75x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="282-Ez-Rh4"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmD-EV-Pvg" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="112" y="0.0" width="35" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="1.0x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="IpT-L1-7WS"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7e-xI-beg" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="149" y="0.0" width="35.5" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="1.25x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="d9S-fl-HD9"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhi-1k-qyV" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="186.5" y="0.0" width="35" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="1.5x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="DBo-HC-cmG"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktH-KL-JOO" customClass="RoundedCornerView" customModule="AudioPlayer" customModuleProvider="target">
+                                                                    <rect key="frame" x="223.5" y="0.0" width="35.5" height="33"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.4823431862" blue="1" alpha="0.60648544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                    <state key="normal" title="1.75x">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="speedSelectButtonTapped:" destination="pGp-fK-E4X" eventType="touchUpInside" id="4sJ-Rw-00c"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.2440068493150685" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="r57-4h-Fqf" firstAttribute="centerY" secondItem="99W-89-fim" secondAttribute="centerY" id="1kd-Oa-Kez"/>
+                                                        <constraint firstAttribute="width" constant="300" id="4B2-l8-Q3E"/>
+                                                        <constraint firstItem="r57-4h-Fqf" firstAttribute="leading" secondItem="yDT-1d-Vq8" secondAttribute="trailing" id="8iQ-08-fQv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="r57-4h-Fqf" secondAttribute="trailing" id="PyL-wH-Oxd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="r57-4h-Fqf" secondAttribute="trailing" id="Rur-Xw-fxz"/>
+                                                        <constraint firstItem="yDT-1d-Vq8" firstAttribute="leading" secondItem="99W-89-fim" secondAttribute="leading" constant="15" id="Wp0-ot-TLv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="yDT-1d-Vq8" secondAttribute="bottom" id="Ybw-Ld-tAn"/>
+                                                        <constraint firstItem="yDT-1d-Vq8" firstAttribute="top" secondItem="99W-89-fim" secondAttribute="top" id="rqK-tV-OTO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="P7q-C9-2Pl" firstAttribute="top" secondItem="99W-89-fim" secondAttribute="bottom" constant="6" id="2hn-gC-Asv"/>
                                                 <constraint firstItem="LxB-QA-wjS" firstAttribute="leading" secondItem="qNw-Pq-5HK" secondAttribute="leading" constant="20" id="85Z-Ua-aRC"/>
+                                                <constraint firstItem="sBk-Aa-P8Y" firstAttribute="centerY" secondItem="99W-89-fim" secondAttribute="centerY" id="CEM-LI-CZV"/>
                                                 <constraint firstAttribute="trailing" secondItem="LxB-QA-wjS" secondAttribute="trailing" constant="20" id="Dif-yJ-cBj"/>
                                                 <constraint firstItem="LxB-QA-wjS" firstAttribute="top" secondItem="qNw-Pq-5HK" secondAttribute="top" id="E0g-r7-Ou9"/>
-                                                <constraint firstItem="P7q-C9-2Pl" firstAttribute="top" secondItem="LxB-QA-wjS" secondAttribute="bottom" constant="41" id="KAb-nu-yzU"/>
-                                                <constraint firstItem="WGE-mg-Alh" firstAttribute="top" secondItem="P7q-C9-2Pl" secondAttribute="bottom" constant="32" id="TO1-Ka-PdW"/>
-                                                <constraint firstItem="RoP-qD-gvd" firstAttribute="top" secondItem="LxB-QA-wjS" secondAttribute="bottom" constant="8" id="Zif-K7-VJc"/>
-                                                <constraint firstItem="eDS-eM-717" firstAttribute="top" secondItem="P7q-C9-2Pl" secondAttribute="bottom" constant="39" id="bOG-EA-8ex"/>
-                                                <constraint firstItem="CUp-Vw-Q2k" firstAttribute="top" secondItem="P7q-C9-2Pl" secondAttribute="bottom" constant="32" id="bOO-VF-eXp"/>
+                                                <constraint firstItem="P7q-C9-2Pl" firstAttribute="top" secondItem="LxB-QA-wjS" secondAttribute="bottom" constant="63" id="KAb-nu-yzU"/>
+                                                <constraint firstItem="sBk-Aa-P8Y" firstAttribute="leading" secondItem="qNw-Pq-5HK" secondAttribute="leadingMargin" constant="1" id="OY6-nV-rfD"/>
+                                                <constraint firstItem="CUp-Vw-Q2k" firstAttribute="top" secondItem="P7q-C9-2Pl" secondAttribute="bottom" constant="10" id="Ot5-BE-P7s"/>
+                                                <constraint firstItem="eDS-eM-717" firstAttribute="top" secondItem="P7q-C9-2Pl" secondAttribute="bottom" constant="17" id="Ykk-is-zg9"/>
+                                                <constraint firstItem="RoP-qD-gvd" firstAttribute="top" secondItem="LxB-QA-wjS" secondAttribute="bottom" constant="1" id="Zif-K7-VJc"/>
+                                                <constraint firstItem="99W-89-fim" firstAttribute="top" secondItem="RoP-qD-gvd" secondAttribute="bottom" constant="6" id="cXp-Bm-iRE"/>
                                                 <constraint firstItem="CUp-Vw-Q2k" firstAttribute="leading" secondItem="qNw-Pq-5HK" secondAttribute="leadingMargin" id="cno-gT-oN3"/>
                                                 <constraint firstItem="RoP-qD-gvd" firstAttribute="centerX" secondItem="qNw-Pq-5HK" secondAttribute="centerX" id="e5S-pc-MYX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WGE-mg-Alh" secondAttribute="bottom" constant="5" id="eqG-T1-WXO"/>
+                                                <constraint firstItem="99W-89-fim" firstAttribute="leading" secondItem="sBk-Aa-P8Y" secondAttribute="trailing" constant="-13" id="gEy-az-mck"/>
                                                 <constraint firstItem="eDS-eM-717" firstAttribute="leading" secondItem="qNw-Pq-5HK" secondAttribute="leading" constant="20" id="l1z-av-7Zo"/>
                                                 <constraint firstItem="WGE-mg-Alh" firstAttribute="trailing" secondItem="qNw-Pq-5HK" secondAttribute="trailingMargin" id="meU-6X-6ih"/>
+                                                <constraint firstItem="WGE-mg-Alh" firstAttribute="top" secondItem="P7q-C9-2Pl" secondAttribute="bottom" constant="10" id="nBc-pE-IZr"/>
                                                 <constraint firstItem="P7q-C9-2Pl" firstAttribute="centerX" secondItem="qNw-Pq-5HK" secondAttribute="centerX" id="sZu-gY-7Dw"/>
                                                 <constraint firstAttribute="trailing" secondItem="eDS-eM-717" secondAttribute="trailing" constant="20" id="xse-Ft-gjH"/>
                                             </constraints>
@@ -155,6 +285,10 @@
                                             <outlet property="nextButton" destination="abb-F5-dmx" id="ipr-18-MNp"/>
                                             <outlet property="playPauseButton" destination="yfp-s7-EFZ" id="2Zx-mD-ant"/>
                                             <outlet property="previousButton" destination="pc4-XS-SWB" id="wZB-pV-YTH"/>
+                                            <outlet property="speedButton" destination="sBk-Aa-P8Y" id="6jJ-Lz-O3G"/>
+                                            <outlet property="speedView" destination="99W-89-fim" id="jVg-At-C4f"/>
+                                            <outlet property="speedViewCollapseButton" destination="r57-4h-Fqf" id="TuE-uM-ozW"/>
+                                            <outlet property="speedViewExtensionConstraint" destination="4B2-l8-Q3E" id="8ov-gN-dJ2"/>
                                             <outlet property="titleLabel" destination="RoP-qD-gvd" id="ani-ef-Pqa"/>
                                             <outlet property="totalDurationLabel" destination="WGE-mg-Alh" id="mhc-ou-yHM"/>
                                             <outlet property="trackSlider" destination="eDS-eM-717" id="2EE-yk-sMm"/>
@@ -185,6 +319,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-back-arrow" width="5.3333334922790527" height="9.3333330154418945"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="play" catalog="system" width="120" height="128"/>
